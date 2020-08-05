@@ -1,0 +1,188 @@
+.main-div {
+	font-size: 16px;
+	display: block;
+	float: left;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.description {
+	margin: 2% 5% 0% 5%
+}
+
+#mocha {
+	margin: 0px 0px !important;
+}
+
+#mocha .suite {
+	margin-left: 0px !important;
+}
+
+body {
+	background-color: #121619;
+	color: #FBF9FF;
+}
+
+a {
+	color: #e6d15c;
+}
+
+.test.fail {
+	color: #E65F5C !important;
+}
+
+.test.pass {
+	color: #9BC53D !important;
+}
+
+.test pre.error {
+	color: #E65F5C !important;
+}
+
+code {
+	color: #FBF9FF !important;
+}
+
+#mocha-stats {
+	color: #FBF9FF !important;
+}
+
+#mocha-stats em {
+	color: #FBF9FF !important;
+}
+
+#mocha .test pre {
+	border: 0px !important;
+	border-radius: 0px !important;
+	-webkit-box-shadow: 0 0px 0px #eee !important;
+	box-shadow: 0 0px 0px #eee !important;
+}
+.replay { /* hide the mocha replay buttons */
+	visibility: hidden;
+	}
+
+
+	
+h1 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	color: #2081C3;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 26.4px;
+}
+
+h3 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 15.4px;
+}
+
+h4 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	color: #2081C3;
+	font-style: italic;
+	font-variant: italic;
+	font-weight: 400;
+	line-height: 15.4px;
+}
+
+p, .list {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.collapsible {
+  background-color: rgb(31, 31, 31);
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: 'show instructions \002B';
+  color: rgb(170, 170, 170);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "hide instructions \2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+task {
+	color: #2081C3;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.sliderWrapper{
+	/* display: inline-block; */
+	left: 5%;
+	top: 15px;
+	position: relative;
+}
+
+.sliderWrapper div{display: inline-block;line-height:60px;}
+ /* The switch - the box around the slider */
+.switch {
+  vertical-align: middle;
+  position: relative;
+  display: inline-block;
+  padding:0px;
+  width: 54px;
+  height: 28px;
+}
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d7d7d7;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {background-color: #1fb5ad;}
+input:focus + .slider {box-shadow: 0 0 1px #1fb5ad;}
+input:checked + .slider:before {-webkit-transform: translateX(26px);-ms-transform: translateX(26px);transform: translateX(26px);}

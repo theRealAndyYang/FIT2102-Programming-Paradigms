@@ -1,0 +1,213 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Mocha Tests for Tutorial 1</title>
+      <link id="style" href="./light.css" rel="stylesheet" />
+      <link href="./libs/mocha.css" rel="stylesheet" />
+
+   </head>
+   <body>
+      <div class="sliderWrapper">
+         <div><p>Dark Mode&nbsp;&nbsp;</p></div>
+           <label class="switch">
+               <input type="checkbox" id="light_vs_dark_toggle">
+               <span class="slider"></span>
+           </label>
+       </div>
+      <div class="main-div">
+         <div class="description">
+            <button class="collapsible"><h1>
+               Welcome to the first FIT2102 Tutorial!
+            </h1></button>
+            <div class="content">
+            <p>
+            JavaScript is the language of web development.  It runs “client-side” on every modern browser and is increasingly used in server-side development using node.js.</p>
+            <p>
+            For the first couple of tutes we will be running, testing and debugging our code in the Chrome browser (results may vary if you use a different browser).</p>
+            <p>
+            It is also a <i>multi-paradigm</i> language.  It has similar syntax to imperative languages like C and Java, but also supports anonymous functions that can be assigned to variables as values.  Thus, we can begin to explore some <i>functional-style</i> programming.</p>
+            <p>
+            We assume a Chrome browser and Windows desktop.  If you have a different type of machine everything should still work but details like how to open files and keyboard shortcuts may vary - I assume you already know how to do this on your own machine.</p>
+            <p>
+            Each week you will be given a code bundle on Moodle.  Once you unzip the bundle onto your local drive there will be a file called <b>worksheetChecklist.html</b> (which you already found) that you will open in your browser (the easiest way is to double click the file icon in the windows explorer if Chrome is your default browser, or drag-drop it into a running Chrome session otherwise). <br> <br>
+            The first time you open it you will see lots of <span class='test fail'>✖ red error messages</span>  from automated tests on the right hand side.  These will go away as you implement solutions to each of the exercises.</p>
+            <p>
+            This <b>worksheetChecklist.html</b> file loads and tests a file called <b>main.js</b> which you will edit to complete the exercises. Scroll down to see the test results listed under each exercise description below. 
+            We recommend the <a href="https://code.visualstudio.com/">vscode</a> editor to make your changes in <b>main.js</b>.  You may use a different one if you have a strong editor preference.</p>
+            <p>
+            To start vscode, hit windows-key and type “code” and press enter.</p>
+            <p>
+            Inside vscode, File -> Open Folder… and navigate to where you unzipped the code bundle.</p>
+            <p>
+            Then click main.js in the Explorer to open it.  Start writing code and ctrl-s to save.</p>
+            <p>
+            After making changes and saving in the editor, reload the Chrome tab where you have worksheetChecklist.html open, and the tests will rerun. 
+            You can see the results in the sections marked <i>Exercise Test Results</i>. You must make all test results <span class='test pass'>✓ green</span>.
+            Note that a passing test is not a formal proof of correctness, or proof that you understand what you have done.  Tests can be fooled or made to pass in a way we didn't expect.
+            Make sure you understand the intention of the question and your solution.  Ask a tutor if in doubt!
+         </p>
+         </p>
+</div>
+            <button class="collapsible"><h1>
+               Exercise 1 - Creating global variables and passing the first test
+            </h1></button>
+            <div class="content"><p>
+               The <b>let</b> and <b>const</b> keywords are for creating mutable and immutable variables respectively (we discuss the exact syntax for this in the lecture).<br><br>
+               For this first exercise you will need to create two variables:<br>
+            <ul class="list">
+               <li><i>aVariable</i>: Create a mutable variable called ‘aVariable’ and assign its value to 1.<br></li>
+               <li><i>aConst</i>: Create an immutable variable called ‘aConst’ and assign its value to aVariable + 1.<br> </li>
+            </ul>
+            Once you've created these variables, open the Chrome debugger: (... -> More tools -> Developer Tools).<br><br>
+            <img src="./images/open_debugger.png"><br><br>
+            In the pane that opens select the “Console” tab type <br><br>
+            > aVariable <b>enter</b><br><br>
+            <img src="./images/console.png"><br><br>
+            <p>
+            The debugger will tell you the value.
+            Note that since you created these outside of any code block or function, they exist at the “global” scope.  This means once main.js is loaded by the browser (as its sourced by worksheetChecklist.html) these variables will be visible to any subsequently loaded code (and from the Console).  This is a rather extreme “side effect”, that is generally to be avoided in good programming practice!
+            </p>
+            </div>
+            <div id="exercise_1_suite" ></div>
+            <button class="collapsible"><h1>
+              Exercise 2 - Create a function
+           </h1></button>
+            <div class="content">
+           <p>
+            Your next task will be to create a function called <i>aFunction</i> using the syntax discussed in the lecture.  Inside the function create another variable called 'anotherVariable', set its value to 2 and return anotherVariable. <br><br>
+            
+            Then create an immutable variable <i>aConst</i> and assign its value to <i>aVariable + 1.</i><br><br>
+
+            Switch to the “Sources” tab in the Chrome Developer Tools and navigate to main.js.<br><br>
+            Click the line number of the return statement inside the function definition to place a breakpoint. <br><br>
+
+
+            Press F5 to reload the page.  The debugger will stop at the breakpoint.  What do you see and why?<br><br>
+            <img src="./images/debugger.png"><br><br>
+
+            Play with the following buttons in the debugger to experiment with stepping through the code.<br><br>         
+           </p>
+         </div>
+
+           <div id="exercise_2_suite" ></div>
+           <button class="collapsible"><h1>
+            Exercise 3 - Create a function to solve Project Euler Problem 1            
+           </h1></button>
+           <div class="content">
+           <p>
+            
+            Project Euler Problem 1 reads:   
+            <br><i>
+            "If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.<br>
+            Find the sum of all the multiples of 3 or 5 below 1000."</i><br><br>
+            
+            <task>Make a function called <i>projectEulerProblem1</i> that calculates the answer using mutable variables, a while loop with an if statement, and returns the answer. </task>
+            If you need to find synatx for some operators, eg Modulo, please look <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">here.</a>
+            
+            <br><br><i>FYI: Working through the problems at <a href="https://projecteuler.net/">Project Euler</a> is a fantastic way to learn a new language.  The problems start off easy and gradually get more difficult.  If you create an account on the site, when you enter the correct solution to a problem it will give you access to forum where people discuss the solutions to that problem in lots of different programming languages.</i><br><br>
+            
+           </p></div>
+           <div id="exercise_3_suite" ></div>
+
+           <button class="collapsible"><h1>
+            Exercise 4 - First Higher-order Functions
+           </h1></button>
+           <div class="content">
+          <p>
+            In this exercise youll have to write some higher-order functions. Higher-order functions are functions which either return or take in as arguments other functions! 
+            <ul class="list">
+              <li><i>alwaysTrue: </i>
+                <ul class="list">
+                  <li>Write a function called ‘alwaysTrue’ which always returns true, no matter what argument it is given.</li>
+                </ul></li>
+
+                <li><i>imperativeSummer: </i>
+                  <ul class="list">
+                    <li>
+   Write a function called imperativeSummer that takes two parameters: 
+    a function f, and a number n. 
+    It should use an imperative loop to sum over the numbers 
+    from 1 up to (but not including) n,
+    including the number x in the sum only if f(x) is true.</li>
+                      <li><i>Hint: you may like to use the javascript ‘ternary conditional’ operator to test with f in your sum expression:
+                      <br>E.g. sum += f(n) ? n : 0</i></li>
+                  </ul></li>
+                  <li><i>sumTo:</i> 
+                  <ul class="list">
+                     <li>Write a function called sumTo that takes as parameters a number n and
+                  uses imperativeSummer and alwaysTrue to calculate the sum of all numbers
+                  from 1 up to (but not including) n.</ul></li>
+               </li>
+                  <li><i>isDivisibleByThreeOrFive: </i>
+                    <ul class="list">
+                      <li>Write a function called ‘isDivisibleByThreeOrFive’ which takes a number as parameter, tests if it is divisible by 3 or 5, returning true if it is divisible or false otherwise. 
+                      </li>
+                    </ul></li>
+
+                    <li><i>projectEulerProblem1UsingImperativeSummer: </i>
+                      <ul>
+                        <li>Write a function called projectEulerProblem1UsingImperativeSummer that uses your imperativeSummer and isDivisibleByThreeOrFive to again solve Project Euler Problem 1.  It should be one line of code!
+                        </li>
+                      </ul></li>
+            </ul>
+          </p>
+          </div>
+          <div id="exercise_4_suite" ></div>
+
+          <button class="collapsible"><h1>
+            Exercise 5 - Immutable loop
+          </h1></button>
+          <div class="content">
+           <p>
+            Write a function called <i>immutableSummer</i> which computes the sum of numbers from 1 up to (but not including) n that satisfy f, but does *not* use while, for, or any mutable variables (defined with let or var).
+            <br>Hint: use recursion!
+
+           </p>
+           </div>
+           <div id="exercise_5_suite" ></div>
+
+
+         </div>
+      </div>
+      <div id="mocha" class="test"></div>
+      <script src="./libs/mocha.js"></script>
+      <script src="./libs/chai.js"></script>
+      <script src="./libs/sinon.js"></script>
+      <script>
+         mocha.setup('bdd');
+         let expect = chai.expect;
+      </script>
+      <script src="./helper.js"></script>
+      <script src="./main.js"></script>
+      <script src="./test/main.test.js"></script>
+      <script>
+         mocha.checkLeaks();
+         mocha.run(() => {
+            const mochaReport = document.getElementById("mocha-report")
+            Array.from(mochaReport.children).forEach(element => {
+               console.log(element)
+               const exerciseId = element.children[0].innerText,
+                     exerciseTestResults = element.children[1],
+                     exerciseDiv = document.createElement("div")
+               exerciseDiv.id = "mocha"
+               exerciseDiv.className = "test"
+               exerciseDiv.appendChild(exerciseTestResults)
+               document.getElementById(exerciseId).appendChild(exerciseDiv)
+            });
+            mochaReport.remove();
+         });       
+         Array.from(document.getElementsByClassName("collapsible")).forEach(coll => 
+            coll.addEventListener("click", function() {
+               this.classList.toggle("active")
+               const content = this.nextElementSibling
+               content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px"
+            }));
+            const checkbox = document.getElementById('light_vs_dark_toggle')
+            const link = document.getElementById("style"); //Fetch the link by its ID
+
+            checkbox.addEventListener('change', (event) => {
+            link.setAttribute("href", event.target.checked ? "dark.css" : "light.css"); //Change its href attribute
+            })
+      </script>
+   </body>
+</html>
